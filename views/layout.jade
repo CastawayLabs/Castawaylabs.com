@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    block styles
+    //- extend styles
+
+  body
+    block content
+    //- extend content
+
+    script(src='http://code.jquery.com/jquery-2.1.1.min.js')
+    script.
+      if (! window.jQuery)
+        document.write(
+          '<script src="/js/jquery/jquery-2.1.1.min"><\/script>'
+        );
+    script(src='/js/bootstrap/bootstrap.min.js')
+    block scripts
+    //- extend scripts
