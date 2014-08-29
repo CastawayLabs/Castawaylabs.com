@@ -3,11 +3,11 @@ html
   head
     title= title
     link(rel='stylesheet', href='/css/bootstrap.css')
-    link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/css/index_.css')
 
   body
     .container#page
-      #home
+      .section#home
         .row: .col-md-6.col-md-offset-6
           .mast
             h1 Castaway Labs
@@ -20,36 +20,36 @@ html
                 li: a(href='#') portfolio
                 li: a(href='#') testimonials
                 li: a(href='#') contact
-      #about
-        .crux
-          h1 about
+      .section#about
+        .row.section-headline
+          h1.section-title about
           p.lead Castaway labs provides professional and efficient digital solutions that
             | fit your business needs. Our development team provides one-on-one customer
             | support to fine tune our solution to your liking.
-        .row
+        .row.section-content
           .col-md-4
             .thumbnail: img(src='http://placehold.it/148x148/ccc/fff')
-            h2 ideation
+            h2.thumb-title ideation
             p Your idea deserves the very best hands working on it. We are dedicated to
               | bringing your vision to life to produce the digital solution your business
               | needs.
           .col-md-4
             .thumbnail: img(src='http://placehold.it/148x148/ccc/fff')
-            h2 design
+            h2.thumb-title design
             p Our designers will create the very best UI for your users. We will work in
               | close collaboration with you to translate your design requirements and wish
               | list into your digital solution.
           .col-md-4
             .thumbnail: img(src='http://placehold.it/148x148/ccc/fff')
-            h2 development
+            h2.thumb-title development
             p Our team utilizes open source projects, as well as content management systems to
               | provide your business with the solution that best fits your needs.
-      #team
-        .crux
-          h1 team
+      .section#team
+        .row.section-headline
+          h1.section-title team
           p.lead Working with us you will work with some of the most experienced and professional
             | problem-solvers handpicked for their talent and dedication from around the world.
-        .row
+        .row.section-content
           .col-md-3
             .thumbnail: img(src='http://placehold.it/128x128/ccc/fff')
             h4 Ed Choi
@@ -82,13 +82,13 @@ html
             .thumbnail: img(src='http://placehold.it/128x128/ccc/fff')
             h4 Annie Ng
             p Designer
-      #portfolio
-        .crux
-          h1 portfolio
+      .section#portfolio
+        .row.section-headline
+          h1.section-title portfolio
           p.lead Castaway labs provides professional and efficient digital solutions that
             | fit your business needs. Our development team provides one-on-one customer
             | support to fine tune our solution to your liking.
-        .row
+        .row.section-content
           .col-md-4
             .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
             h4 Project Title
@@ -113,8 +113,8 @@ html
             .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
             h4 Project Title
             p Client
-      #testimonials
-        h1 what our clients say
+      .section#testimonials
+        h1.section-title what our clients say
         .carousel(data-ride='carousel', data-interval='8000').slide#carousel-testimonials
           ol.carousel-indicators
             li(data-target='#carousel-testimonials', data-slide-to='0').active
@@ -152,11 +152,11 @@ html
                   | Phasellus sagittis nunc enim, sit amet placerat ligula elementum ut.
                   | Cras in pharetra felis.
                 footer Haytham Kenway @ Templars Inc.
-          .quotemarks.left “
-          .quotemarks.right ”
-      #contact
-        h1 contact
-        .row
+          .quotemarks.left
+          .quotemarks.right
+      .section#contact
+        h1.section-title contact
+        .row.section-content
           .col-md-6
             p.lead We'd love to hear from you, whether you're interested in doing business or
               | in possible career opportunities. Drop us a line!
@@ -177,7 +177,7 @@ html
               .form-group.text-right
                 .col-sm-3.col-sm-offset-9
                   button(type='submit').btn.btn-lg.btn-success.form-control.input-lg SEND
-      #footer
+      .section#footer
         p: small &copy; Castaway Labs LLC &ndash; 2014
 
     script(src='http://code.jquery.com/jquery-2.1.1.min.js')
