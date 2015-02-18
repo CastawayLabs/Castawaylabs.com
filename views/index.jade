@@ -15,30 +15,30 @@ html
               | anything from a plugin to a full sized solution.
             nav(role='navigation')#nav-sup
               ul.nav
-                li: a(href='#') about
-                li: a(href='#') team
-                li: a(href='#') portfolio
-                li: a(href='#') testimonials
-                li: a(href='#') contact
+                li: a(href='#about') about
+                li: a(href='#team') team
+                //-li: a(href='#portfolie') portfolio
+                //-li: a(href='#testimonials') testimonials
+                li: a(href='#contact') contact
       .section#about
         .row.section-headline
           h1.section-title about
           p.lead Castaway Labs &reg; provides professional and efficient web and mobile solutions to fit your business needs. Our team will work with you in one-on-one meetings to fine tune your product to your liking.
         .row.section-content
           .col-md-4
-            .thumbnail: img(src='http://placehold.it/148x148/ccc/fff')
+            .thumbnail-about: img(src='/img/icons/lightbulb.png')
             h2.thumb-title Idea
             p Your idea deserves the very best hands working on it. We are dedicated to
               | bringing your vision to life to produce the digital solution your business
               | needs.
           .col-md-4
-            .thumbnail: img(src='http://placehold.it/148x148/ccc/fff')
+            .thumbnail-about: img(src='/img/icons/pencil.png')
             h2.thumb-title Design
             p Our designers will create the very best UI for your users. We will work in
               | close collaboration with you to translate your design requirements and wish
               | list into your digital solution.
           .col-md-4
-            .thumbnail: img(src='http://placehold.it/148x148/ccc/fff')
+            .thumbnail-about: img(src='/img/icons/code.png')
             h2.thumb-title Development
             p Our team utilizes open source projects, as well as content management systems to
               | provide your business with the solution that best fits your needs.
@@ -67,12 +67,9 @@ html
             .thumbnail: img(src='http://placehold.it/128x128/ccc/fff')
             h4 Zia Ur Rehman
             p Developer
-      .section#portfolio
+      //-.section#portfolio
         .row.section-headline
           h1.section-title portfolio
-          p.lead Castaway labs provides professional and efficient digital solutions that
-            | fit your business needs. Our development team provides one-on-one customer
-            | support to fine tune our solution to your liking.
         .row.section-content
           .col-md-4
             .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
@@ -86,27 +83,12 @@ html
             .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
             h4 Project Title
             p Client
-          .col-md-4
-            .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
-            h4 Project Title
-            p Client
-          .col-md-4
-            .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
-            h4 Project Title
-            p Client
-          .col-md-4
-            .thumbnail: img(src='http://placehold.it/196x128/ccc/fff')
-            h4 Project Title
-            p Client
-      .section#testimonials
-        h1.section-title what our clients say
+      //-.section#testimonials
+        h1.section-title Our happy customers
         .carousel(data-ride='carousel', data-interval='8000').slide#carousel-testimonials
           ol.carousel-indicators
             li(data-target='#carousel-testimonials', data-slide-to='0').active
             li(data-target='#carousel-testimonials', data-slide-to='1')
-            li(data-target='#carousel-testimonials', data-slide-to='2')
-            li(data-target='#carousel-testimonials', data-slide-to='3')
-            li(data-target='#carousel-testimonials', data-slide-to='4')
           .carousel-inner
             .item.active
               blockquote
@@ -120,23 +102,6 @@ html
                   | Pellentesque quis porta quam. Aliquam urna nunc, ultrices ut ante et,
                   | ultrices venenatis lacus.
                 footer Richard Lionheart @ Crown of England
-            .item
-              blockquote
-                p.lead In hac habitasse platea dictumst. Nulla viverra convallis pharetra.
-                  | Donec sagittis vulputate tellus, facilisis dictum ex auctor nec.
-                footer Dr. Warren Vidic @ Abstergo International
-            .item
-              blockquote
-                p.lead In varius, felis vitae pulvinar posuere, lectus sapien euismod
-                  | mauris, ac finibus enim eros eu ex. Vivamus condimentum lacus mauris,
-                  | egestas feugiat ipsum venenatis vel.
-                footer Ezio A. da Firenze @ Assassins LLC
-            .item
-              blockquote
-                p.lead Maecenas sapien nisl, elementum a maximus vel, efficitur quis sem.
-                  | Phasellus sagittis nunc enim, sit amet placerat ligula elementum ut.
-                  | Cras in pharetra felis.
-                footer Haytham Kenway @ Templars Inc.
           .quotemarks.left
           .quotemarks.right
       .section#contact
@@ -150,15 +115,15 @@ html
               .form-group
                 label(for='inputName').col-sm-3.control-label NAME
                 .col-sm-9
-                  input(name='inputName', placeholder='what shall we call you?').form-control.input-lg#inputName
+                  input(name='inputName').form-control.input-lg#inputName
               .form-group
                 label(for='inputEmail').col-sm-3.control-label EMAIL
                 .col-sm-9
-                  input(name='inputEmail', placeholder='how do we reach you?').form-control.input-lg#inputEmail
+                  input(name='inputEmail').form-control.input-lg#inputEmail
               .form-group
                 label(for='inputMessage').col-sm-3.control-label MESSAGE
                 .col-sm-9
-                  textarea(name='inputMessage', placeholder='what do you wanna say?', rows='4').form-control.input-lg#inputMessage
+                  textarea(name='inputMessage', rows='4').form-control.input-lg#inputMessage
               .form-group.text-right
                 .col-sm-3.col-sm-offset-9
                   button(type='submit').btn.btn-lg.btn-success.form-control.input-lg SEND
