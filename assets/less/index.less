@@ -6,7 +6,6 @@
 @import "bootstrap/mixins";
 
 #page {
-	margin: (@navbar-height / 2) auto;
 	padding: 0;
 	border-radius: @border-radius-base;
 	box-shadow: 2px 3px 15px fade(#000, 25%);
@@ -39,6 +38,12 @@
 					display: inline-block;
 					margin-bottom: 0;
 				}
+			  .thumbnail-about {
+				display: inline-block;
+				margin-bottom: 0;
+				background-color: inherit;
+				border: none;
+			  }
 
 				h2.thumb-title {
 					margin-top: (@font-size-base / 2);
@@ -52,8 +57,11 @@
 }
 
 #home {
-	background: @gray-lighter center center/100% url('../img/stock/home-bg.jpg');
-	height: 640px;
+	background: url('../img/stock/home-bg.jpg');
+	height: 100vh;
+	background-color: #eee;
+	background-size: cover;
+	background-position: 22% 75%;
 
 	.mast {
 		max-width: 296px;
