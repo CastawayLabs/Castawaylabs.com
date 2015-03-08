@@ -1,4 +1,4 @@
-$("#form-contact").submit(function(event) {
+$('#form-contact').submit(function(event) {
     event.stopPropagation();
     event.preventDefault();
 
@@ -21,20 +21,20 @@ $("#form-contact").submit(function(event) {
     // Façades ftw
     function enc(string) {
         if (!string) {
-            return "";
+            return '';
         }
         return encodeURIComponent(string);
     }
 
     var valid = true;
     var dataMap = {};
-    $("#form-contact").find("input").each(function(index, elem) {
+    $('#form-contact').find('input').each(function(index, elem) {
         valid = valid && elem.checkValidity();
         if(valid) {
             dataMap[enc(elem.getAttribute('name'))] = enc(elem.value);
         }
     });
-    $("#form-contact").find("textarea").each(function(index, elem) {
+    $('#form-contact').find('textarea').each(function(index, elem) {
         valid = valid && elem.checkValidity();
         if(valid) {
             dataMap[enc(elem.getAttribute('name'))] = enc(elem.value);
@@ -43,20 +43,25 @@ $("#form-contact").submit(function(event) {
 
     if (!valid) {
         // Show error message
-        updateStatus("Please fill in all required fields with valid data", false);
+        updateStatus('Please fill in all required fields with valid data', false);
         return false;
     }
 
     $.ajax({
-        method: "POST",
-        url: "email",
+        method: 'POST',
+        url: 'email',
         data: dataMap,
+        dataType: 'text',
         success: function(data) {
-            updateStatus("Email was sent!", true);
+            if (data === 'ok') {
+                updateStatus('Email was sent!', true);
+            } else {
+                updateStatus('Failed to send email', false);
+            }
         },
         error: function(xhr, data, error) {
             // TODO: implement more detailed message?
-            updateStatus("Failed to send email", false);
+            updateStatus('Failed to send email', false);
         }
     })
 
