@@ -4,17 +4,18 @@ $('#form-contact').submit(function(event) {
 
     // Function definitions
     function updateStatus(message, success) {
-        // TODO: Implement DOM changes! Let's be user friendly here ;3
+        var contactMessage = $('#form-contact-status');
         if (!message) {
-            // For example after a delay, or when they change the form again after invalid creds
-            console.log('Hide it!');
+            contactMessage.fadeOut();
         }
         else if (success) {
-            // Green / blue bar?
-            console.log('Success! '+message);
+            contactMessage.fadeOut();
+            contactMessage.text('Email sent successfully!');
+            contactMessage.fadeIn();
         } else { // failed
-            // Red bar?
-            console.log('Faillure! '+message);
+            contactMessage.fadeOut();
+            contactMessage.text('Sorry, there was an error sending the email.');
+            contactMessage.fadeIn();
         }
     }
 
