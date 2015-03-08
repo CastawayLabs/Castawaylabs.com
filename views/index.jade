@@ -119,7 +119,7 @@ html
               .form-group
                 label(for='inputEmail').col-sm-3.control-label EMAIL
                 .col-sm-9
-                  input(name='inputEmail').form-control.input-lg#inputEmail
+                  input(name='inputEmail' type='email').form-control.input-lg#inputEmail
               .form-group
                 label(for='inputMessage').col-sm-3.control-label MESSAGE
                 .col-sm-9
@@ -128,7 +128,7 @@ html
                 .col-sm-3.col-sm-offset-9
                   button(type='submit').btn.btn-lg.btn-success.form-control.input-lg SEND
       .section#footer
-        p: small &copy; Castaway Labs LLC &ndash; 2015
+        p: small &copy; Castaway Labs LLC &ndash; #{new Date().getFullYear()}
 
     script(src='http://code.jquery.com/jquery-2.1.1.min.js')
     script.
