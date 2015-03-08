@@ -4,7 +4,6 @@ html
     title= title
     link(rel='stylesheet', href='/css/bootstrap.css')
     link(rel='stylesheet', href='/css/index.css')
-
   body
     #page
       .section#home
@@ -111,6 +110,7 @@ html
             p.lead We'd love to hear from you, whether you're interested in doing business or
               | in possible career opportunities. Drop us a line!
           .col-md-6
+            span#form-contact-status
             form(role='form').form-horizontal#form-contact
               .form-group
                 label(for='inputName').col-sm-3.control-label NAME
@@ -149,3 +149,4 @@ html
           });
       });
     script(src='/js/bootstrap/bootstrap.min.js')
+    script(src='/js/contact.js')
