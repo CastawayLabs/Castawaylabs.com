@@ -2,8 +2,8 @@ var express = require('express'),
     nodemailer = require('nodemailer'),
     router = express.Router(),
     transporter = nodemailer.createTransport({
-        port: 25,
-        service: 'Gmail',
+        port: 2525,
+        service: 'Mandrill',
         auth: {
             user: process.env.EMAIL_USER || '',
             pass: process.env.EMAIL_PASS || ''
