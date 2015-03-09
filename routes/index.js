@@ -28,7 +28,7 @@ router.post('/email', function(req, res) {
       email = req.body.inputEmail || '',
       message = req.body.inputMessage || '';
 
-  if(!name || !email || !message || !emailValidator.test(email)) { // Add more validation?
+  if(!name || !email || !message || !emailValidator.test(decodeURIComponent(email))) { // Add more validation?
     res.send('nope');
     res.end();
     return;
