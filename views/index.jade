@@ -115,15 +115,15 @@ html
               .form-group
                 label(for='inputName').col-sm-3.control-label NAME
                 .col-sm-9
-                  input(name='inputName').form-control.input-lg#inputName
+                  input(name='inputName' required).form-control.input-lg#inputName
               .form-group
                 label(for='inputEmail').col-sm-3.control-label EMAIL
                 .col-sm-9
-                  input(name='inputEmail' type='email').form-control.input-lg#inputEmail
+                  input(name='inputEmail' type='email' required).form-control.input-lg#inputEmail
               .form-group
                 label(for='inputMessage').col-sm-3.control-label MESSAGE
                 .col-sm-9
-                  textarea(name='inputMessage', rows='4').form-control.input-lg#inputMessage
+                  textarea(name='inputMessage', rows='4' required).form-control.input-lg#inputMessage
               .form-group.text-right
                 .col-sm-3.col-sm-offset-9
                   button(type='submit').btn.btn-lg.btn-success.form-control.input-lg SEND
