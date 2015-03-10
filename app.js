@@ -27,7 +27,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 
-// enter the dreaded less-middleware!
 app.use(less(path.join(__dirname, 'assets', 'less'), {
   compiler: {
     yuicompress: app.get('env') === 'development' ? false : true
@@ -36,7 +35,7 @@ app.use(less(path.join(__dirname, 'assets', 'less'), {
   dest: path.join(__dirname, 'assets'),
   force: app.get('env') === 'development' ? true : false,
   once: app.get('env') === 'production' ?  true : false,
-  // see: http://git.io/x_5jrw
+
   preprocess: {
     path: function (pname, req) {
       if (path.sep === '\\') {

@@ -8,17 +8,22 @@
 #page {
 	padding: 0;
 	border-radius: @border-radius-base;
-	box-shadow: 2px 3px 15px fade(#000, 25%);
+	box-shadow: 2px 3px 15px fade(#33323B, 25%);
 	overflow: hidden;
 	text-align: center;
 
+	.lead {
+		max-width: 750px;
+	}
+
 	.section {
-		padding: @navbar-height 0;
+		padding: (@navbar-height/2) 0;
 
 		h1.section-title {
 			margin-top: 0;
 			font-weight: normal;
-			color: darken(@gray-lighter, 15%);
+			color: #33323B;
+			text-transform: uppercase;
 		}
 
 		.row.section-headline {
@@ -43,13 +48,17 @@
 				margin-bottom: 0;
 				background-color: inherit;
 				border: none;
+
+				i {
+					font-size: 10em;
+				}
 			  }
 
 				h2.thumb-title {
 					margin-top: (@font-size-base / 2);
 					margin-bottom: (@font-size-base / 2);
 					font-weight: normal;
-					color: spin(@brand-primary, -20);
+					color: #EC4C4C;
 				}
 			}
 		}
@@ -64,17 +73,18 @@
 	background-position: 22% 75%;
 
 	.mast {
-		max-width: 296px;
+		max-width: 450px;
 		display: inline-block;
 
 		& > h1 {
 			font-size: 4em;
-			color: fade(#000, 75%);
+			color: #33323B;
 			text-shadow: 1px 1px 1px fade(#fff, 75%);
 			margin-bottom: 0;
 		}
 
 		& > p {
+			padding-top: 20px;
 			font-size: 1.3em;
 		}
 
@@ -84,13 +94,14 @@
 			& > ul.nav > li > a {
 				padding: 0;
 				color: @gray-dark;
-				font-size: @font-size-h4;
+				font-size: 2em;
 				.transition(all .25s);
+				text-transform: uppercase;
 
 				&:hover {
 					background: transparent;
 					font-size: 3em;
-					color: fade(#000, 75%);
+					color: fade(#33323B, 75%);
 					text-shadow: 1px 1px 1px fade(#fff, 75%);
 					.transition(all .25s);
 				}
@@ -122,7 +133,7 @@
 
 	& > h1.section-title {
 		color: fade(#fff, 85%);
-		text-shadow: 1px 1px 1px fade(#000, 50%);
+		text-shadow: 1px 1px 1px fade(#33323B, 50%);
 		font-weight: 300;
 		margin-top: 0;
 	}
