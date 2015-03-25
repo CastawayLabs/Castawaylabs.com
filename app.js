@@ -49,6 +49,19 @@ app.use(less(path.join(__dirname, 'assets', 'less'), {
 
 app.use(express.static(path.join(__dirname, 'assets')));
 
+app.use(function(req, res, next) {
+    if (!req.secure) {
+        var url = 'https://' + req.hostname;
+        if (req.app.get('port') != 443) {
+          url += ':' + req.app.get('port');
+        }
+        res.redirect(301, url + req.originalUrl);
+        res.end();
+    } else {
+        next();
+    }
+});
+
 app.use('/', routes);
 
 /// catch 404 and forward to error handler
