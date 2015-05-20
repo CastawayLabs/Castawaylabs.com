@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use(function(req, res, next) {
     if (!req.secure) {
-        var url = 'https://' + req.hostname;
+        var url = 'https://castawaylabs.com';
         if (req.app.get('port') != 443) {
           url += ':' + req.app.get('port');
         }
