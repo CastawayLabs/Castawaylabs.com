@@ -51,12 +51,7 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use(function(req, res, next) {
     if (!req.secure) {
-        var url = 'https://' + req.hostname;
-        if (req.app.get('port') != 443) {
-          url += ':' + req.app.get('port');
-        }
-        res.redirect(301, url + req.originalUrl);
-        res.end();
+        res.redirect(301, 'https://' + req.get('host') + req.originalUrl).end();
     } else {
         next();
     }
