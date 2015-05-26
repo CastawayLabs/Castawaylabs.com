@@ -50,11 +50,11 @@ app.use(less(path.join(__dirname, 'assets', 'less'), {
 app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use(function(req, res, next) {
-    if (!req.secure) {
-        res.redirect(301, 'https://' + req.get('host') + req.originalUrl).end();
-    } else {
+    //if (!req.secure) {
+    //    res.redirect(301, 'https://' + req.get('host') + req.originalUrl).end();
+    //} else {
         next();
-    }
+    //}
 });
 
 app.use('/', routes);
