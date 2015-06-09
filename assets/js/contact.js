@@ -8,12 +8,18 @@ $('#form-contact').submit(function(event) {
         if (!message) {
             contactMessage.fadeOut();
         }
+        // TODO: Make alert dismissable with Bootstrap
         else if (success) {
             contactMessage.fadeOut();
+            contactMessage.removeClass();
+            contactMessage.addClass("alert alert-success");
             contactMessage.text('Email sent successfully!');
             contactMessage.fadeIn();
+            $("#form-contact").trigger('reset');
         } else { // failed
             contactMessage.fadeOut();
+            contactMessage.removeClass();
+            contactMessage.addClass("alert alert-danger");
             contactMessage.text('Sorry, there was an error sending the email.');
             contactMessage.fadeIn();
         }

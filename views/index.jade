@@ -131,6 +131,8 @@ html
                             | in possible career opportunities. Drop us a line!
                     .col-md-6
                         span#form-contact-status
+                            button.close(type='button', data-dismiss='alert', aria-label='Close' id='close')
+                                span(aria-hidden='true') &times;
                         form(role='form').form-horizontal#form-contact
                             .form-group
                                 label(for='inputName').col-sm-3.control-label NAME
